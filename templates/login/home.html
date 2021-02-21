@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+<script src="{% static 'js/home.js' %}"></script>
+
+
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  
+  
+
+  <meta charset="utf-8">
+  <title>Secure Health Insurance</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="{% static 'img/favicon.png' %}" rel="icon">
+  <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="{% static 'lib/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="{% static 'lib/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+  <link href="{% static 'lib/animate/animate.min.css' %}" rel="stylesheet">
+  <link href="{% static 'lib/ionicons/css/ionicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+  <link href="{% static 'lib/lightbox/css/lightbox.min.css' %}" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="{% static 'css/style.css' %}" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css/home1.css' %}">
+
+
+</head>
+
+<body>
+
+  <!--Header-->
+  <header id="header">
+    <div class="container-fluid">
+
+      <div id="logo" class="pull-left">
+        <h1><a href="#intro" class="scrollto" style="color:#18d26e;">Secure Health Insurance</a></h1>
+      </div>
+
+    </div>
+  </header>
+
+  
+
+
+   <!--Flip cards section -->
+   
+<section id="call-to-action" class="wow fadeIn" style="margin-top: 80px;">
+    <div class="row">
+
+      <div class="col">
+        <div class="flip-box" >
+           <div class="flip-box-inner">
+             <div class="flip-box-front">
+                <img src="/static/member1.png" alt="member" style="width:150px;height:150px;margin-top: 30px">
+              </div>
+              <div class="flip-box-back">
+                  <div class="text" style="margin-top: 50px;">
+                    <h4> Already a Member? </h4>
+                    <a href="{% url 'login' %}"type="button" class="btn btn-danger">Login</a>
+                  </div>
+              </div>
+            </div>
+        </div>
+      </div>
+
+      <div class="col">
+       <div class="flip-box">
+          <div class="flip-box-inner">
+          <div class="flip-box-front">
+          <img src="/static/re.png" alt="member" style="width:150px;height:150px;margin-top: 30px">
+          </div>
+          <div class="flip-box-back">
+          <div class="text" style="margin-top: 50px;">
+          <h4> Not a Member? </h4>
+          <a href="{% url 'signup' %}"type="button" class="btn btn-danger">Register</a>
+          </div>
+          </div>
+          </div>
+          </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+  
+
+
+
+  <script src="{% static 'lib/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'lib/jquery/jquery-migrate.min.js' %}"></script>
+  <script src="{% static 'lib/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'lib/easing/easing.min.js' %}"></script>
+  <script src="{% static 'lib/superfish/hoverIntent.js' %}"></script>
+  <script src="{% static 'lib/superfish/superfish.min.js' %}"></script>
+  <script src="{% static 'lib/wow/wow.min.js' %}"></script>
+  <script src="{% static 'lib/waypoints/waypoints.min.js' %}"></script>
+  <script src="{% static 'lib/counterup/counterup.min.js' %}"></script>
+  <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'lib/isotope/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'lib/lightbox/js/lightbox.min.js' %}"></script>
+  <script src="{% static 'lib/touchSwipe/jquery.touchSwipe.min.js' %}"></script>
+
+
+  <script src="{% static 'js/main.js' %}"></script>
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+</body>
+</html>
