@@ -3,6 +3,8 @@ from analysisapp import views
 from django.conf import settings
 from django.conf.urls.static import static
 
+app_name = 'analysisapp'
+
 urlpatterns = [
     # path('', views.splash),
     path('index', views.index),
@@ -13,7 +15,12 @@ urlpatterns = [
     path('Maps', views.Maps),
     path('table', views.table),
     path('form', views.fileforms),
-    path('submit', views.submit_claim)
+    path('submit', views.submit_claim, name='submit'),
+    path('status',views.status, name='status'),
+    path('docver/<int:i>/', views.docver, name='docver'),
+    path('docverdone/<int:i>/', views.docverdone, name='docverdone'),
+    path('claimapprove', views.claimapprove, name='claimapprove'),
+    path('approval/<int:i>/<str:s>/', views.approval, name='approval'),
 
 ]
 

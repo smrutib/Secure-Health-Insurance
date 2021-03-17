@@ -1,0 +1,45 @@
+
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<div class="container">
+
+    <h2>ACTIVE CLAIMS</h2>
+    
+    
+    <table class="table table-striped">
+        <tr>
+            <th>NPI</th>
+            <th>Claim Id</th>
+            <th>Label</th>
+            <th>Document Submission </th>
+            <th>Document Verification </th>
+            <th>Final Approval</th>
+    
+        </tr>
+        {% for r in table %}
+        <tr>
+            <td>{{ r.npi }}</td>
+            <td>{{r.claimid}}</td>
+            <td>{{r.label}}</td>
+            <td>{{r.documentver}}</td>
+            {% if r.documentver == 'D' %}
+
+            <td><a  class="btn btn-success btn-sm" > Hospital admin</a> <br><br>
+                <a  class="btn btn-success btn-sm" >Lab Admin</a><br><br>
+                <a  class="btn btn-success btn-sm" >Insurance Admin</a></td>
+                {% endif %}
+            {% if r.documentver == 'D' %}
+
+            <td><a href="{% url 'analysisapp:approval' r.claimid 'A' %}" class="btn btn-success btn-sm" > Accept</a> <br><br>
+                <a href="{% url 'analysisapp:approval' r.claimid 'R' %}" class="btn btn-success btn-sm" >Reject</a></td>
+                {% endif %}
+    
+        </tr>
+    
+        {% endfor %}
+    
+    </table>
+    </div>
