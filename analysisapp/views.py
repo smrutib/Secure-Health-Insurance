@@ -449,7 +449,9 @@ def submit_claim(request):
 
 
 def provider(request):
-    return render(request, 'provider.html')
+    name = request.user.name
+    context = {'name':name}
+    return render(request, 'provider.html', context)
 
 def status(request):
     table = (Data.objects.filter(npi =request.user.npi)).order_by('claimid')
