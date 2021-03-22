@@ -25,10 +25,7 @@
 <body>
 	
 	<div class="limiter">
-		<div class="container-login100"  style="background-image:linear-gradient(
-      rgba(0, 0, 0, 0.65), 
-     rgba(0, 0, 0, 0.65)
-    ), url({% static 'images/bg-01.jpg' %});background-size: cover;z-index: 1" >
+		<div class="container-login100"  style="background-size: cover;z-index: 1; background: #26282c;" >
 
 			<div class="wrap-login100" style="padding-top: 10px; padding-left: 40px;">
 				<div class="login100-pic js-tilt" data-tilt >
@@ -37,7 +34,7 @@
 			<div style="padding-right: 10%;">
 				<form  method="POST" style="padding-right:10%;width: 140%;">
 					{% csrf_token %}<br>
-					<span class="login100-form-title">
+					<span class="login100-form-title" style="color: #4691f6;">
 						Sign Up 
 					</span>
 
@@ -150,7 +147,7 @@
 
 
 					<div class="container-login100-form-btn">
-						<button class="login100-form-btn" type="submit">
+						<button class="login100-form-btn" type="submit" style="background-color: #4691f6;">
 							Sign Up 
 						</button>
 					</div>

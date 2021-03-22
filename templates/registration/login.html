@@ -26,10 +26,7 @@
 	
 	<div class="limiter">
 
-		<div class="container-login100"  style="background-image:linear-gradient(
-      rgba(0, 0, 0, 0.65), 
-     rgba(0, 0, 0, 0.65)
-    ), url({% static 'images/bg-01.jpg' %});background-size: cover;z-index: 1" >
+		<div class="container-login100"  style="background-size: cover;z-index: 1; background: #26282c;" >
 
 
 			<div class="wrap-login100" style="padding-top: 90px">
@@ -39,8 +36,8 @@
 
 				<form  method="POST">
 					{% csrf_token %}
-					<span class="login100-form-title">
-						Member Login
+					<span class="login100-form-title" style="color: #4691f6;">
+						 Login
 					</span><br>
 
 					<div  class="wrap-input100 " style="width: 290px;">
@@ -84,7 +81,7 @@
 					</div>
 					<div class="container-login100-form-btn">
 						<a href="{% url 'login' %}">
-						<button class="login100-form-btn" type="submit">
+						<button class="login100-form-btn" type="submit" style="background-color: #4691f6;">
 							Login
 						</button>
 						</a>

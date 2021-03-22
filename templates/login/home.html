@@ -18,10 +18,7 @@
   <meta content="" name="keywords">
   <meta content="" name="description">
 
-  <!-- Favicons -->
-  <link href="{% static 'img/favicon.png' %}" rel="icon">
-  <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon">
-
+ 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
 
@@ -38,28 +35,76 @@
   <!-- Main Stylesheet File -->
   <link href="{% static 'css/style.css' %}" rel="stylesheet">
   <link rel="stylesheet" href="{% static 'css/home1.css' %}">
+  <link rel="stylesheet" href="{% static 'css/newhome.css' %}">
+
 
 
 </head>
 
-<body>
-
+<body style="background-image:url({% static 'images/bg.jpg' %});">
   <!--Header-->
-  <header id="header">
+  <header id="header" >
     <div class="container-fluid">
 
       <div id="logo" class="pull-left">
-        <h1><a href="#intro" class="scrollto" style="color:#18d26e;">Secure Health Insurance</a></h1>
+        <h1><a class="scrollto" style="color:#007bff;">Secure Health Insurance</a></h1>
       </div>
 
     </div>
   </header>
+<br><br>
+
+  <div class="card" style="position: relative; margin-left: 14%; background-color: #26282c; opacity: 0.9; ">
+  
+    <div class="title">Sign Up!</div>
+  
+    <div class="icon">
+      <svg class="svg-icon" viewBox="0 0 20 20">
+        <path d="M8.749,9.934c0,0.247-0.202,0.449-0.449,0.449H4.257c-0.247,0-0.449-0.202-0.449-0.449S4.01,9.484,4.257,9.484H8.3C8.547,9.484,8.749,9.687,8.749,9.934 M7.402,12.627H4.257c-0.247,0-0.449,0.202-0.449,0.449s0.202,0.449,0.449,0.449h3.145c0.247,0,0.449-0.202,0.449-0.449S7.648,12.627,7.402,12.627 M8.3,6.339H4.257c-0.247,0-0.449,0.202-0.449,0.449c0,0.247,0.202,0.449,0.449,0.449H8.3c0.247,0,0.449-0.202,0.449-0.449C8.749,6.541,8.547,6.339,8.3,6.339 M18.631,4.543v10.78c0,0.248-0.202,0.45-0.449,0.45H2.011c-0.247,0-0.449-0.202-0.449-0.45V4.543c0-0.247,0.202-0.449,0.449-0.449h16.17C18.429,4.094,18.631,4.296,18.631,4.543 M17.732,4.993H2.46v9.882h15.272V4.993z M16.371,13.078c0,0.247-0.202,0.449-0.449,0.449H9.646c-0.247,0-0.449-0.202-0.449-0.449c0-1.479,0.883-2.747,2.162-3.299c-0.434-0.418-0.714-1.008-0.714-1.642c0-1.197,0.997-2.246,2.133-2.246s2.134,1.049,2.134,2.246c0,0.634-0.28,1.224-0.714,1.642C15.475,10.331,16.371,11.6,16.371,13.078M11.542,8.137c0,0.622,0.539,1.348,1.235,1.348s1.235-0.726,1.235-1.348c0-0.622-0.539-1.348-1.235-1.348S11.542,7.515,11.542,8.137 M15.435,12.629c-0.214-1.273-1.323-2.246-2.657-2.246s-2.431,0.973-2.644,2.246H15.435z"></path>
+      </svg>
+    </div><!--/icon-->
+  
+    <div class="features">
+      <ul>
+        <li>Not registered yet?</li>
+
+      </ul>
+    </div><!--/features-->
+  
+    <a  href="{% url 'signup' %}" class="btn">Sign Up</a>
+    
+  
+  </div><!--/card-->
+
+    <div class="card" style="background-color: #363636; margin-left: 9%;opacity: 0.9;">
+  
+    <div class="title">Sign In</div>
+  
+    <div class="icon">
+      <svg class="svg-icon" viewBox="0 0 20 20">
+        <path d="M12.075,10.812c1.358-0.853,2.242-2.507,2.242-4.037c0-2.181-1.795-4.618-4.198-4.618S5.921,4.594,5.921,6.775c0,1.53,0.884,3.185,2.242,4.037c-3.222,0.865-5.6,3.807-5.6,7.298c0,0.23,0.189,0.42,0.42,0.42h14.273c0.23,0,0.42-0.189,0.42-0.42C17.676,14.619,15.297,11.677,12.075,10.812 M6.761,6.775c0-2.162,1.773-3.778,3.358-3.778s3.359,1.616,3.359,3.778c0,2.162-1.774,3.778-3.359,3.778S6.761,8.937,6.761,6.775 M3.415,17.69c0.218-3.51,3.142-6.297,6.704-6.297c3.562,0,6.486,2.787,6.705,6.297H3.415z"></path>
+      </svg>
+    </div><!--/icon-->
+  
+    <div class="features">
+      <ul>
+        <li>Already a User?</li>
+      </ul>
+    </div><!--/features-->
+  
+    <a href="{% url 'login' %}" class="btn">Sign in</a>
+  
+  </div><!--/card-->
+  
+  
+  
+   
 
   
 
 
    <!--Flip cards section -->
-   
+<!--
 <section id="call-to-action" class="wow fadeIn" style="margin-top: 80px;">
     <div class="row">
 
@@ -100,7 +145,7 @@
 </section>
   
 
-
+-->
 
   <script src="{% static 'lib/jquery/jquery.min.js' %}"></script>
   <script src="{% static 'lib/jquery/jquery-migrate.min.js' %}"></script>

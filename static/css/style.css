@@ -11,14 +11,14 @@ body {
 }
 
 a {
-  color: #18d26e;
+  color: #007bff;
   transition: 0.5s;
 }
 
 a:hover,
 a:active,
 a:focus {
-  color: #18d36e;
+  color: #007bff;
   outline: none;
   text-decoration: none;
 }
@@ -155,7 +155,7 @@ h6 {
 #header #logo h1 a:hover {
   color: #fff;
   padding-left: 10px;
-  border-left: 4px solid #18d26e;
+  border-left: 4px solid #007bff;
 }
 
 #header #logo img {
@@ -750,9 +750,9 @@ body.mobile-nav-active #mobile-nav-toggle {
 --------------------------------*/
 
 #call-to-action {
-  background: linear-gradient(rgba(0, 142, 99, 0.1), rgba(0, 0, 0, 0.1)), url(../img/call-to-action-bg.jpg) fixed center center;
+  background-color: #0e0c28;
   background-size: cover;
-  padding: 60px 0;
+  padding: 100px 0;
 }
 
 #call-to-action h3 {
