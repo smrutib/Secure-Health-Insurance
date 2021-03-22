@@ -5,10 +5,10 @@ class upload_file_form(forms.Form):
     file = forms.FileField()
 
 class claim_form(forms.Form):
-    claim_id = forms.IntegerField()
+    
     beneficiary_name = forms.CharField(max_length=100)
     beneficiary_id = forms.CharField(max_length=100)
-    provider_id = forms.IntegerField()
+    #provider_id = forms.IntegerField()
     speciality_description = forms.CharField(max_length=100)
     diagnosis_code = forms.IntegerField()
     submitted_amount = forms.IntegerField()

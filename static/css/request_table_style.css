@@ -41,16 +41,16 @@ display: flex;
 
 span.step {
   background: #111;
-  border-radius: 25px;
-  -moz-border-radius: 25px;
-  -webkit-border-radius: 25px;
+  border-radius: 20px;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
   color: #ffffff;
   display: inline-block;
   font-weight: bold;
   line-height: 50px;
  
   text-align: center;
-  width:50px; 
+  width:100px; 
   
  
   

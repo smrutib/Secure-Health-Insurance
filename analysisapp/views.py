@@ -33,6 +33,7 @@ import os
 from django.conf import settings
 import pickle
 from django.urls import reverse
+from login.models import CustomUser
 # Create your views here.
 # from analysisapp.working_code.cleaning import clean_data
 # from analysisapp.working_code.createDatabase import create_database_excel
@@ -296,19 +297,16 @@ def submit_claim(request):
     if request.method =='POST':
         form = claim_form(request.POST)
         if form.is_valid():
-            npi = int(request.POST.get("provider_id"))
+            #npi = int(request.POST.get("provider_id"))
             submitted_amount =  int(request.POST.get("submitted_amount"))
             amount_to_be_paid_by_medicare = int(request.POST.get("amount_to_be_paid_by_medicare"))
             supplier_submitted_charges = int(request.POST.get("supplier_submitted_charges"))
             supplier_medicare_amount = int(request.POST.get("supplier_medicare_amount"))
-            claim_id = request.POST.get("claim_id")
+            #claim_id = request.POST.get("claim_id")
             specialty_description = request.POST.get("speciality_description")
+            npi=int(request.user.npi)
             print(npi)
             print(specialty_description)
-
-
-          
-            
 
             df2 = pd.read_csv('check.csv')
             df1=pd.read_csv('labelled.csv')
@@ -316,7 +314,7 @@ def submit_claim(request):
 
             #print(temp['Average_Supplier_Submitted_Charge_median'])
             #
-
+            print(temp)
             d=Data(npi=npi)
             d.specialty_description=specialty_description 
             #print(type(temp.get(key='bene_count_mean')))
@@ -417,14 +415,15 @@ def submit_claim(request):
             d. Average_Supplier_Medicare_Payment_Amount_sum =temp['Average_Supplier_Medicare_Payment_Amount_sum'].values[0]+supplier_medicare_amount
             d. Average_Supplier_Medicare_Payment_Amount_median =temp['Average_Supplier_Medicare_Payment_Amount_median'].values[0]
             d. Average_Supplier_Medicare_Payment_Amount_std =temp['Average_Supplier_Medicare_Payment_Amount_std'].values[0]
-            d.claimid=claim_id
+            #d.claimid=claim_id
            
             temp['bene_count_sum']=temp['bene_count_sum']+1
             temp['Average_Medicare_Payment_Amount_sum'] = temp['Average_Medicare_Payment_Amount_sum']+amount_to_be_paid_by_medicare
             temp['Average_Supplier_Medicare_Payment_Amount_sum'] = temp['Average_Supplier_Medicare_Payment_Amount_sum']+ supplier_medicare_amount
             temp['Average_Supplier_Submitted_Charge_sum']= temp['Average_Supplier_Submitted_Charge_sum'] + supplier_submitted_charges
             temp['Average_Submitted_Charge_Amount_sum']= temp['Average_Submitted_Charge_Amount_sum'] + submitted_amount
-            temp['claimid']=claim_id 
+            p=Data.objects.latest('claimid')
+            temp['claimid']=int(p.claimid)+1
             temp.drop(labels=['label_final','anomaly'], axis =1, inplace= True)
 
             final_model=pickle.load(open('finalized_model.sav','rb'))
@@ -441,7 +440,9 @@ def submit_claim(request):
                     d.label="notsuspicious"
 
             d.save()
-            return render(request,'claim_successful.html')
+            l=Data.objects.latest('claimid')
+
+            return render(request,'claim_successful.html',{'claim_id':l.claimid})
     else:
         return render(request,'submit_claim.html',{'form':form})
 
