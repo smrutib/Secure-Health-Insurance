@@ -47,10 +47,10 @@
 
 </head>
 
-<body >	
+<body style="background-image:url({% static 'images/bg.jpg' %});">	
 <div>	
-<span style="float:left"><h1 style="padding-left: 30px">Your Requests</h1></span>
-<span style="float:right"> <a href="{% url 'logout' %}" class="nav-link">Log Out</a></span><span style="float:right"> <a class="nav-link" href="/analysis/provider">Home</a></span>
+<span style="float:left"><h1 style="padding-left: 30px; color: white;">Your Requests</h1></span>
+<span style="float:right"> <a href="{% url 'logout' %}" class="nav-link" style="color:white">Log Out</a></span><span style="float:right"> <a class="nav-link" href="/analysis/provider"  style="color:white">Home</a></span>
 
 </div>
 <br>
@@ -114,7 +114,7 @@
 			{% if r.label == 'suspicious'  %}
 				{% if r.documentver == 'ND' %}
 				<h5 style="font-style: italic">Your claim has been flagged for review. Please submit required documents.</h5>
-				<a href="{% url 'analysisapp:docver' r.claimid %}"type="button" class="btn btn-danger">Document Verfication</a>
+				<a href="{% url 'analysisapp:docver' r.claimid %}"type="button" class="btn btn-danger" style="background-color: #007bff;">Document Verfication</a>
 				{% endif %}
 				{% endif %}
 		</div>

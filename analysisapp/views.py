@@ -422,8 +422,9 @@ def submit_claim(request):
             temp['Average_Supplier_Medicare_Payment_Amount_sum'] = temp['Average_Supplier_Medicare_Payment_Amount_sum']+ supplier_medicare_amount
             temp['Average_Supplier_Submitted_Charge_sum']= temp['Average_Supplier_Submitted_Charge_sum'] + supplier_submitted_charges
             temp['Average_Submitted_Charge_Amount_sum']= temp['Average_Submitted_Charge_Amount_sum'] + submitted_amount
-            p=Data.objects.latest('claimid')
-            temp['claimid']=int(p.claimid)+1
+            #p=Data.objects.latest('claimid')
+            #temp['claimid']=int(p.claimid)+1
+            temp['claimid']=0
             temp.drop(labels=['label_final','anomaly'], axis =1, inplace= True)
 
             final_model=pickle.load(open('finalized_model.sav','rb'))
