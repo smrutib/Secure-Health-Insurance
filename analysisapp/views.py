@@ -15,6 +15,7 @@
         
 #     })
 from django.shortcuts import render
+from django.shortcuts import redirect
 import json
 from analysisapp.forms import upload_file_form,claim_form
 from analysisapp.file_upload.file_upload_handling import handle_upload_file
@@ -454,8 +455,11 @@ def status(request):
     return render(request,'status.html',context)
 
 def docver(request, i):	
-    context ={ 'i' : i}
-    return render(request, 'docver.html', context)
+    Data.objects.filter(claimid=i).update(documentver='D')
+    # context ={ 'i' : i}
+    # return render(request, 'docver.html', context)
+    # return HttpResponseRedirect(reverse('analysisapp:status'))
+    return redirect("http://127.0.0.1:8005/")
 
 
 def docverdone(request,i):

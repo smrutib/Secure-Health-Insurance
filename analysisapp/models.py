@@ -100,7 +100,7 @@ class Data(models.Model):
     Average_Supplier_Medicare_Payment_Amount_sum	=models.DecimalField(max_digits=100, decimal_places=10)
     Average_Supplier_Medicare_Payment_Amount_median	=models.DecimalField(max_digits=100, decimal_places=10)
     Average_Supplier_Medicare_Payment_Amount_std=models.DecimalField(max_digits=100, decimal_places=10)
-    claimid=models.IntegerField(primary_key=True)
+    claimid=models.AutoField(primary_key=True)
     label=models.CharField(max_length=50, default='notsuspicious')
     documentver=models.CharField(max_length=10, default='ND')
 
