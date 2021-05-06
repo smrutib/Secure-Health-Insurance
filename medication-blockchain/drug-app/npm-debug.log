@@ -1,0 +1,35 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'install' ]
+2 info using npm@3.5.2
+3 info using node@v14.16.1
+4 verbose stack Error: Cannot find module 'ansi'
+4 verbose stack Require stack:
+4 verbose stack - /usr/share/npm/lib/ls.js
+4 verbose stack - /usr/share/npm/lib/install.js
+4 verbose stack - /usr/share/npm/lib/npm.js
+4 verbose stack - /usr/share/npm/bin/npm-cli.js
+4 verbose stack     at Function.Module._resolveFilename (internal/modules/cjs/loader.js:880:15)
+4 verbose stack     at Function.Module._load (internal/modules/cjs/loader.js:725:27)
+4 verbose stack     at Module.require (internal/modules/cjs/loader.js:952:19)
+4 verbose stack     at require (internal/modules/cjs/helpers.js:88:18)
+4 verbose stack     at Object.<anonymous> (/usr/share/npm/lib/ls.js:15:13)
+4 verbose stack     at Module._compile (internal/modules/cjs/loader.js:1063:30)
+4 verbose stack     at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)
+4 verbose stack     at Module.load (internal/modules/cjs/loader.js:928:32)
+4 verbose stack     at Function.Module._load (internal/modules/cjs/loader.js:769:14)
+4 verbose stack     at Module.require (internal/modules/cjs/loader.js:952:19)
+5 verbose cwd /home/smruti/Downloads/medication-blockchain/drug-app
+6 error Linux 4.15.0-141-generic
+7 error argv "/usr/bin/node" "/usr/bin/npm" "install"
+8 error node v14.16.1
+9 error npm  v3.5.2
+10 error code MODULE_NOT_FOUND
+11 error Cannot find module 'ansi'
+11 error Require stack:
+11 error - /usr/share/npm/lib/ls.js
+11 error - /usr/share/npm/lib/install.js
+11 error - /usr/share/npm/lib/npm.js
+11 error - /usr/share/npm/bin/npm-cli.js
+12 error If you need help, you may report this error at:
+12 error     <https://github.com/npm/npm/issues>
+13 verbose exit [ 1, true ]
